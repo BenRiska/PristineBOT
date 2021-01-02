@@ -18,7 +18,7 @@ client.on("messageDelete", msg => {
   })
   
 client.on("message", msg => {
-    if (msg.content == "I love pristine") {
+    if (msg.content == "I love pristine" || msg.content == "i love pristine") {
       msg.react("❤️")
       msg.channel.send("I love you all too! (except gobby)")
     }
@@ -27,12 +27,21 @@ client.on("message", msg => {
         msg.reply("charles LOL :hehe:")
       }
 
-      if (msg.content == "who is the true clown of the day") {
-        msg.reply("gobby always")
+    if (msg.content == "where is tivreys charles") {
+        msg.reply("with ozys fmaya")
+        msg.reply(":hehe:")
       }
 
-      if (msg.content == "123") {
-        msg.reply("Pristine!!!")
+    if (msg.content == "who is clown of the day") {
+        msg.channel.send("gobby always")
+      }
+
+    if (msg.content == "123") {
+        msg.channel.send("PRISTINE!!!")
+      }
+
+    if (msg.content == "i think we might lose this gw") {
+        msg.channel.send("i know i didn't hear that :stabpepe:")
       }
   
     // if (msg.content === `${BOT_PREFIX}${MOD_ME_COMMAND}`) {
