@@ -30,6 +30,10 @@ client.on("message", msg => {
       if (msg.content == "who is the true clown of the day") {
         msg.reply("gobby always")
       }
+
+      if (msg.content == "123") {
+        msg.reply("Pristine!!!")
+      }
   
     // if (msg.content === `${BOT_PREFIX}${MOD_ME_COMMAND}`) {
     //   modUser(msg.member)
