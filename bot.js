@@ -2,19 +2,15 @@ require("dotenv").config()
 
 const Discord = require("discord.js")
 
+const {members} = require("./fixtures")
+console.log(members)
+
 const client = new Discord.Client({
     partials: ["MESSAGE"]
   })
-
-// const BOT_PREFIX = "!" 
-// const MOD_ME_COMMAND = "mod-me"
   
 client.on("ready", () => {
     console.log("Our bot is ready to go!!!!")
-  })
-  
-client.on("messageDelete", msg => {
-    msg.channel.send("Stop deleting messages")
   })
   
 client.on("message", msg => {
@@ -24,16 +20,17 @@ client.on("message", msg => {
     }
 
     if (msg.content == "what unit does tivrey not have") {
-        msg.reply("charles LOL :hehe:")
+        msg.reply("charles LOL 😂")
       }
 
     if (msg.content == "where is tivreys charles") {
         msg.reply("with ozys fmaya")
-        msg.reply(":hehe:")
       }
 
     if (msg.content == "who is clown of the day") {
-        msg.channel.send("gobby always")
+        num = Math.floor(Math.random() * (members.length + 1) - 1)
+        const clown = members[num]
+        msg.channel.send(`${clown}`)
       }
 
     if (msg.content == "123") {
@@ -41,16 +38,9 @@ client.on("message", msg => {
       }
 
     if (msg.content == "i think we might lose this gw") {
-        msg.channel.send("i know i didn't hear that :stabpepe:")
+        msg.channel.send("i know i didn't hear that 🔫🔫🔫")
       }
-  
-    // if (msg.content === `${BOT_PREFIX}${MOD_ME_COMMAND}`) {
-    //   modUser(msg.member)
-    // }
+
   })
-  
-// function modUser(member) {
-//     member.roles.add("783084095223234590")
-//   }
   
 client.login(process.env.BOT_TOKEN)
