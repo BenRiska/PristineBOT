@@ -1,8 +1,8 @@
 require("dotenv").config()
-const Discord = require("discord.js")
+const {Client, MessageAttachment} = require("discord.js")
 const {getRandomMember} = require("./helpers/get-random-member")
 
-const client = new Discord.Client({
+const client = new Client({
     partials: ["MESSAGE"]
   })
   
@@ -16,12 +16,10 @@ client.on("message", msg => {
       msg.channel.send("I love you all too! (except gobby)")
     }
 
-    if (msg.content == "what unit does tivrey not have") {
-        msg.reply("charles LOL 😂")
-      }
-
-    if (msg.content == "where is tivreys charles") {
-        msg.reply("with ozys fmaya")
+    if (msg.content.includes("i wish i had") || msg.content.includes("I wish i had") || msg.content.includes("I wish I had") ) {
+      const attachment = new MessageAttachment('https://static2.abc.es/Media/201503/20/risitas-apple-dos--644x362.jpg');
+      msg.channel.send(`One day`)
+      msg.channel.send(attachment);
       }
 
     if (msg.content == "who is clown of the day") {
