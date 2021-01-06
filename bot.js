@@ -36,7 +36,7 @@ client.on("message", msg => {
         msg.channel.send("i know i didn't hear that 🔫🔫🔫")
       }
 
-    if(msg.content.includes("pristine")){
+    if(msg.content.includes("pristine") || msg.content.includes("Pristine") || msg.content.includes("PRISTINE")){
       msg.react("❤️")
     }
 
