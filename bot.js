@@ -1,9 +1,6 @@
 require("dotenv").config()
-
 const Discord = require("discord.js")
-
 const {getRandomMember} = require("./helpers/get-random-member")
-
 
 const client = new Discord.Client({
     partials: ["MESSAGE"]
@@ -38,6 +35,10 @@ client.on("message", msg => {
     if (msg.content == "i think we might lose this gw") {
         msg.channel.send("i know i didn't hear that 🔫🔫🔫")
       }
+
+    if(msg.content.includes("pristine")){
+      msg.react("❤️")
+    }
 
   })
   
