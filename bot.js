@@ -2,8 +2,8 @@ require("dotenv").config()
 
 const Discord = require("discord.js")
 
-const {members} = require("./fixtures")
-console.log(members)
+const {getRandomMember} = require("./helpers/get-random-member")
+
 
 const client = new Discord.Client({
     partials: ["MESSAGE"]
@@ -28,9 +28,7 @@ client.on("message", msg => {
       }
 
     if (msg.content == "who is clown of the day") {
-        num = Math.floor(Math.random() * (members.length + 1) - 1)
-        const clown = members[num]
-        msg.channel.send(`${clown}`)
+        msg.channel.send(`${getRandomMember()}`)
       }
 
     if (msg.content == "123") {
