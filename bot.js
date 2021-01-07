@@ -22,12 +22,16 @@ client.on("message", msg => {
       msg.channel.send(attachment);
       }
 
-    if (msg.content == "who is clown of the day") {
+    if (msg.content == "who is clown of the day" || msg.content == "Who is clown of the day") {
         msg.channel.send(`${getRandomMember()}`)
       }
 
     if (msg.content == "123") {
-        msg.channel.send("PRISTINE!!!")
+        msg.channel.send("PRISTINE!")
+      }
+
+    if (msg.content == "321") {
+        msg.channel.send("!ENITSIRP")
       }
 
     if (msg.content == "i think we might lose this gw") {
