@@ -1,6 +1,7 @@
 require("dotenv").config()
 const {Client, MessageAttachment} = require("discord.js")
-const {getRandomMember} = require("./helpers/get-random-member")
+const {getRandomValue} = require("./helpers/get-random-value")
+const {members, loliStatements} = require("./fixtures")
 
 const client = new Client({
     partials: ["MESSAGE"]
@@ -23,7 +24,7 @@ client.on("message", msg => {
       }
 
     if (msg.content == "who is clown of the day" || msg.content == "Who is clown of the day") {
-        msg.channel.send(`${getRandomMember()}`)
+        msg.channel.send(getRandomValue(members))
       }
 
     if (msg.content == "123") {
@@ -36,6 +37,10 @@ client.on("message", msg => {
 
     if (msg.content == "i think we might lose this gw") {
         msg.channel.send("i know i didn't hear that 🔫🔫🔫")
+      }
+
+      if (msg.content.includes("loli")) {
+        msg.channel.send(getRandomValue(loliStatements))
       }
 
     if(msg.content.includes("pristine") || msg.content.includes("Pristine") || msg.content.includes("PRISTINE")){
