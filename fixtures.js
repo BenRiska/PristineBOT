@@ -4,5 +4,8 @@ module.exports.members =  [
 module.exports.loliStatements = [
     "911 we have an emergency",
     "Abort convo.",
-    "Watch out, Tivrey's about"
+    "A loli a day keeps your sadness away - Tivrey",
+    "Wait a minute, that's illegal.",
+    "FBI open up",
+    "well done you just put Pristine on a list"
 ]
