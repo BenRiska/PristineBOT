@@ -35,10 +35,6 @@ client.on("message", msg => {
         msg.channel.send("!ENITSIRP")
       }
 
-    if (msg.content == "i think we might lose this gw") {
-        msg.channel.send("i know i didn't hear that 🔫🔫🔫")
-      }
-
       if (msg.content.includes("loli") || msg.content.includes("Loli")) {
         msg.channel.send(getRandomValue(loliStatements))
       }
