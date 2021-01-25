@@ -52,8 +52,6 @@ client.on("message", messageHandler)
 
       let query = msg.content.split("!")[1]
 
-      query = msg.content.split(" ")[0]
-
       let url = `https://api.tenor.com/v1/search?q=${query}&key=${process.env.TENOR_KEY}&limit=8`
 
       let response = await fetch(url)
